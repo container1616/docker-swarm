@@ -36,7 +36,7 @@ Please note docker compose is not mandatory for docker swarm to work, simple doc
 
 	docker run -d container1616/gs-scheduling-tasks
 
-To see the created container run the following command
+To see the created containers run the following command
 	
 	docker -H tcp://<<node2-ip>>:3000 ps
 
