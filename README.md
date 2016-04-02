@@ -1,5 +1,5 @@
 # docker-swarm
-Create three nodes with your favourite cloud provider. In this example 3 nodes are used node1, node2 and node3. 
+Create three nodes with your favourite cloud provider e.g. node1, node2 and node3. 
 
 node1  : Running the consul ( discovery backend) 
 	
