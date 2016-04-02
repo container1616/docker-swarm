@@ -31,6 +31,7 @@ Running the application :
   		image: container1616/gs-scheduling-tasks
   		network_host: my-net
   		
+
 export DOCKER_HOST="tcp://<<node2-ip>>:3000"
 docker-compose scale spring=5
 
