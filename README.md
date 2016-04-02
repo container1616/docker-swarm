@@ -26,7 +26,7 @@ Create three nodes with your favourite cloud provider e.g. node1, node2 and node
         docker -H tcp://<<node2-ip>>:3000 network create --driver overlay --subnet=10.0.9.0/24 my-net	 
         docker -H tcp://<<node2-ip>>:3000 network ls (overlay network should be visible)	
 
-Running the application : 
+#Running the application : 
 
  using docker-compose (download docker-compose.yaml) 
 	SSH into any machine (node2 or 3) and run the following commands. install docker compose (https://docs.docker.com/compose/install/), if not already in that machine. 
@@ -42,7 +42,7 @@ To see the created containers run the following command
 	
 	docker -H tcp://<<node2-ip>>:3000 ps
 
-References : 
+#References : 
         https://docs.docker.com/engine/userguide/networking/get-started-overlay/
         https://docs.docker.com/swarm/install-manual/
         https://docs.docker.com/swarm/install-w-machine/
