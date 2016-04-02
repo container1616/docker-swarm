@@ -1,0 +1,5 @@
+version: '2'
+services:
+  spring:
+    image: container1616/gs-scheduling-tasks
+    network_host: my-net
