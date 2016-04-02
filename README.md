@@ -16,6 +16,7 @@ node2  : Running the Swarm Manager and client
 	
 node3  : Running the Swarm client 
 	SSH into the host and run the following command. It would do the following, stop the running docker daemon, start the docker daemon which is listening on TCP port to enable swarm communication and run the swarm client. 
+	
 	sudo service docker stop
 	docker daemon -H unix:///var/run/docker.sock -H tcp://0.0.0.0:2375 --cluster-store=consul://<<node1-ip>>:8500 --cluster-advertise=<<node3-ip>>:2375 &
 	sudo docker run -d swarm join --addr=<<node3-ip>>:2375 consul://<<node1-ip>>:8500
