@@ -44,7 +44,7 @@ To see the created containers run the following command
 
 Altenatively use rest API to view all container information 
 
-	http://<<node2-ip>>containers/json
+	http://<<node2-ip>>:3000/containers/json
 
 #References : 
         https://docs.docker.com/engine/userguide/networking/get-started-overlay/
