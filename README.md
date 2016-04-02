@@ -23,17 +23,10 @@ Create overlay network :
         docker -H tcp://<<node2-ip>>:3000 network create --driver overlay --subnet=10.0.9.0/24 my-net	 
         docker -H tcp://<<node2-ip>>:3000 network ls (overlay network should be visible)	
 
-Running the application :
-  Compose file (docker-compose.yaml) :: 
-  	version: '2'
-  	services:
-  	  spring:
-  		image: container1616/gs-scheduling-tasks
-  		network_host: my-net
-  		
+Running the application (download docker-compose.yaml) :
 
-export DOCKER_HOST="tcp://<<node2-ip>>:3000"
-docker-compose scale spring=5
+	export DOCKER_HOST="tcp://<<node2-ip>>:3000"
+  	docker-compose scale spring=5
 
 References : 
         https://docs.docker.com/engine/userguide/networking/get-started-overlay/
