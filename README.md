@@ -26,11 +26,19 @@ Create overlay network :
         docker -H tcp://<<node2-ip>>:3000 network create --driver overlay --subnet=10.0.9.0/24 my-net	 
         docker -H tcp://<<node2-ip>>:3000 network ls (overlay network should be visible)	
 
-Running the application (download docker-compose.yaml) :
-	SSH into any machine (node2 or 3) and run the following commands. install docker compose (https://docs.docker.com/compose/install/), if not already in that machine. Please note docker compose is not mandatory for docker swarm to work, simple docker run would also work.
+Running the application using docker-compose (download docker-compose.yaml) :
+	SSH into any machine (node2 or 3) and run the following commands. install docker compose (https://docs.docker.com/compose/install/), if not already in that machine. 
 
 	export DOCKER_HOST="tcp://<<node2-ip>>:3000"
   	docker-compose scale spring=5
+
+Please note docker compose is not mandatory for docker swarm to work, simple docker run would also work.
+
+	docker run -d container1616/gs-scheduling-tasks
+
+To see the created container run the following command
+	
+	docker -H tcp://<<node2-ip>>:3000 ps
 
 References : 
         https://docs.docker.com/engine/userguide/networking/get-started-overlay/
